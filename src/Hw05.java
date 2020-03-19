@@ -3,13 +3,13 @@ public class Hw05 {
     static final int h = size / 2;
     public static void main (String[] args){
         float[] arr = new float[size];//массив единиц
-        float[] arr1 = new float[size];//массив результвтов вычислений в одном потоке
+        float[] arr1 = new float[size];///массив результвтов вычислений в одном потоке
         float[] arr2 = new float[h];//массив результатов вичислений в 2 потоках, 1-я половина
         float[] arr3 = new float[h];//массив результатов вичислений в 2 потоках, 2-я половина
         arrayWith1(arr);
         oneThread(arr, arr1);
         twoThreads(arr, arr1, arr2, arr3);
-
+        System.out.println("Работа завершена");
     }
     // Метод вычисляет массив с разбивкой на 2 потока, выводит затраченное время на каждый этап:
     private static void twoThreads(float[] arr, float[] arr1, float[] arr2, float[] arr3) {
